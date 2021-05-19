@@ -10,7 +10,7 @@ class EstudioController extends Controller{
     }
 
     function index(){
-        parent::render("cultivos/index");
+        parent::render("estudio/index");
     }
     function add(){
         $date = filter_var($_POST['date'], FILTER_SANITIZE_STRING);
