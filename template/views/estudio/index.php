@@ -30,16 +30,17 @@ require_once INCLUDES . 'header.php' ?>
     <div class="container">
         <div class="container">
             <div class="col-6">
-                <h2> INGRESO DE DATOS DEL ESTUDIO </h2>
-                <form>
+                <h2> Ingreso de datos del Estúdio </h2>
+                <form action="<?php echo URL.'estudio/add'; ?>" method="POST">
                     <div class="form-group">
                         <label for="exampleInputEmail1">Fecha </label>
-                        <input type="date" class="form-control" name="fecha" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                        <input type="date" class="form-control" name="date" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Trabajador </label>
                         <br>
-                        <select name="" id="">
+                        <select name="idtrabajador" id="">
+                            <option value="" selected disabled>Seleccione uno</option>
                             <?php foreach ($trabajadores as $key => $trbajador) : ?>
                                 <option class="form-control" value="<?php echo $trbajador["id_trabajador"]; ?>"><?php echo "{$trbajador["apellidos"]} {$trbajador["nombres"]}"; ?></option>
                             <?php endforeach; ?>
@@ -49,7 +50,8 @@ require_once INCLUDES . 'header.php' ?>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Sector </label>
                         <br>
-                        <select name="" id="">
+                        <select name="idcultivo" id="">
+                            <option value="" selected disabled>Seleccione uno</option>
                             <?php foreach ($sectores as $key => $sector) : ?>
                                 <option class="form-control" value="<?php echo $sector["id_sector"]; ?>"><?php echo "{$sector["nombre"]}"; ?></option>
                             <?php endforeach; ?>
@@ -65,30 +67,17 @@ require_once INCLUDES . 'header.php' ?>
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
+                        <th scope="col">#id</th>
+                        <th scope="col">Fecha </th>
+                        <th scope="col">Opciones </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <th scope="row">1</th>
                         <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
+                        <td><button type="button" class="btn btn-warning">Agregar Análisis</button> <button type="button" class="btn btn-danger">Eliminar Análisis</button></td>
+                        
                     </tr>
                 </tbody>
             </table>

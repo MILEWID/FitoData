@@ -26,7 +26,7 @@ class EstudioModels extends Model{
 
     function add($data){
         try{
-            $query = "INSERT INTO {$this->table}(fecha, id_trabajador, id_cultivo) VALUES(? , ? , ?)";
+            $query = "INSERT INTO {$this->table}(fecha, id_trabajador, id_cultivo) VALUES(:date , :id_em , id_cul)";
             $result = Model::query($query, $data);
             if($result[0]){
                 return ["ok", $result[1]]; 
