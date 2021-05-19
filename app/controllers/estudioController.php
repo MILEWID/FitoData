@@ -1,5 +1,5 @@
 <?php 
-class ClientController extends Controller{
+class EstudioController extends Controller{
 
     function __construct()
     {
@@ -7,9 +7,6 @@ class ClientController extends Controller{
     }
 
     function index(){
-
-    }
-    function add(){
         
     }
 }
