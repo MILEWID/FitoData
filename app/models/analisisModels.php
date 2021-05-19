@@ -8,6 +8,22 @@ class EstudioModels extends Model{
         parent::__construct();
     }
 
+    function show(int $id = null){
+        try {
+            if($id === null){
+                $query = "SELECT * FROM {$this->table}";
+                $result = parent::query($query);
+                return $result;
+            }else{
+                $query = "SELECT * FROM {$this->table} WHERE id_analisis = ?";
+                $result = parent::query($query,[$id]);
+                return $result[0];
+            }
+        } catch (Exception $th) {
+            return $th->getMessage();
+        }
+
+    }
     
     function add($data){
         try{
@@ -24,4 +40,5 @@ class EstudioModels extends Model{
         }
     }
 
+    
 }

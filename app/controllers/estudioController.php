@@ -1,5 +1,7 @@
 <?php 
 require_once MODELS.'estudioModels.php';
+require_once MODELS.'sectorModels.php';
+require_once MODELS.'employeeModels.php';
 
 class EstudioController extends Controller{
 
@@ -10,7 +12,13 @@ class EstudioController extends Controller{
     }
 
     function index(){
-        parent::render("estudio/index");
+        $sectorModels = new SectorModels();
+        $empleadoModels = new employeeModels();
+
+
+        $queryEmpleados = $empleadoModels->show();
+        $querySector= $sectorModels->show();
+        parent::render("estudio/index",[$queryEmpleados, $querySector]);
     }
     function add(){
         $date = filter_var($_POST['date'], FILTER_SANITIZE_STRING);

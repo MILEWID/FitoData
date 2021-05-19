@@ -1,4 +1,9 @@
-<?php require_once INCLUDES . 'header.php' ?>
+<?php 
+echo "<pre>";
+$sectores = $params[1];
+$trabajador = $params[0];
+
+require_once INCLUDES . 'header.php' ?>
 <body>
     <!-- nav bar para el inicio de Seción -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
