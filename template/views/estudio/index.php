@@ -21,9 +21,22 @@
       </nav>
 
   <div class="container">
-  <div class="container">
     <div class="col-6">
-    <h2> INGRESO DE DATOS DEL ESTUDIO </h2>
+    <h2> Ingreso de datos del estudio </h2>
+  <form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Fecha </label>
+    <input type="date" class="form-control" name="fecha" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <label for="exampleInputEmail1">Trabajador </label>
+    <input type="text" class="form-control" name="trabajador"id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="ingrese nombre del trabajador">
+    <label for="exampleInputEmail1">Cultivo </label>
+    <input type="text" class="form-control" name="cultivo" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="ingrese nombre del cultivo">
+  </div>
+  <button type="submit" class="btn btn-primary">Guardar Datos </button>
+</form>
+    </div>
+    <div class="col-6">
+    <h2> Ingreso de datos del cultivo </h2>
   <form>
   <div class="form-group">
     <label for="exampleInputEmail1">Fecha </label>
@@ -36,7 +49,6 @@
   <button type="submit" class="btn btn-primary">Guardar Datos </button>
 </form>
     </div>
-  </div>
   </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>

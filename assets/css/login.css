@@ -20,3 +20,7 @@ a, h2, h1{
     width: 100%;
     height: 900px
 }
+
+body{
+    background-color: rgb(137, 228, 137);
+}
