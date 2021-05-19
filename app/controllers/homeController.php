@@ -1,7 +1,12 @@
 <?php 
-class homeController{
-    
+class homeController extends Controller{
+
+    function __construct()
+    {
+        parent::__construct();    
+    }
+
     function index(){
-        echo "hola";
+        parent::render('php/index');
     }
 }
