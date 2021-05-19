@@ -1,5 +1,4 @@
 <?php
-
 class EstudioModels extends Model{
 
     private $table = "estudio";

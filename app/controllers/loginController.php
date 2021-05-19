@@ -1,5 +1,5 @@
 <?php
-require_once MODELS.'loginModels.php';
+require_once MODELS.'employeeModels.php';
 
 class LoginController extends Controller{
     
