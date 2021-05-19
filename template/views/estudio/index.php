@@ -1,5 +1,4 @@
 <?php 
-echo "<pre>";
 $sectores = $params[1];
 $trabajador = $params[0];
 
