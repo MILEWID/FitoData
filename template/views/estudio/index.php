@@ -24,26 +24,26 @@ require_once INCLUDES . 'header.php' ?>
            </div>
         </div>
       </nav>
-    <form action="<?php echo URL.'employee/add'; ?>" method="POST">
-        <label for="">fecha</label>
-        <input type="date" name="nombres" id="">  
-        <br>  
-        <label for="">trabajador</label>
-        <select name="" id="">
-            <option value="">trabajador 1</option>
-            <option value="">trabajador 2</option>
-            <option value="">trabajador 3</option>
-        </select> 
-        <br>
-        <label for="">cultivo</label>
-        <select name="" id="">
-            <option value="">Cultivo 1</option>
-            <option value="">Cultivo 2</option>
-            <option value="">Cultivo 3</option>
-        </select> 
-        <br>
-        <input type="submit" value="Registrar">
-    </form>
+
+  <div class="container">
+  <div class="container">
+    <div class="col-6">
+    <h2> INGRESO DE DATOS DEL ESTUDIO </h2>
+  <form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Fecha </label>
+    <input type="date" class="form-control" name="fecha" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <label for="exampleInputEmail1">Trabajador </label>
+    <input type="text" class="form-control" name="trabajador"id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <label for="exampleInputEmail1">Cultivo </label>
+    <input type="text" class="form-control" name="cultivo" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+  </div>
+  <button type="submit" class="btn btn-primary">Guardar Datos </button>
+</form>
+    </div>
+  </div>
+  </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
 </html>

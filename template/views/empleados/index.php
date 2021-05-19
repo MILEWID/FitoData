@@ -9,6 +9,7 @@
            <div class="col-7">
             <h2 class=>FitoData</h2>
            </div>
+           
            <div class="col-2">
             <div class="collapse navbar-collapse " id="navbarNav" >
         
@@ -19,6 +20,9 @@
            </div>
         </div>
       </nav>
+
+
+
     <form action="<?php echo URL.'employee/add'; ?>" method="POST">
         <label for="">Nombre</label>
         <input type="text" name="nombres" id="">  
