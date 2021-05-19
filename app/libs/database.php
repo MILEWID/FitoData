@@ -13,13 +13,12 @@ class Database
         $this->name = DB_NAME;
         $this->user = DB_USER;
         $this->password = DB_PWD;
-        $this->charset = DB_CHARSET;
     }
 
     public function connect()
     {
         try {
-            $connection = "mysql:host=" . $this->host . ";dbname=" . $this->name . ";charset=" . $this->charset;
+            $connection = "mysql:host=" . $this->host . ";dbname=" . $this->name;
             
             $options = [
                 PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
@@ -39,7 +38,7 @@ class Database
      * Retorna la conexion a la BDD de forma estatica
      * @return object de tipo PDO
      */    
-    public static function getConnection() : object{
+    public static function getConnection(){
         $self = new self();
         return $self->connect();
     }

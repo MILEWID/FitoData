@@ -53,10 +53,9 @@ define('PLUGINS', ASSETS.'plugins/');
  * Database Configuration
 */
 define('DB_HOST','localhost');
-define('DB_NAME','');
-define('DB_USER','');
+define('DB_NAME','bdd_fitodata');
+define('DB_USER','root');
 define('DB_PWD','');
-define('DB_CHARSET','');
 /*
 * Email configuration
 */
