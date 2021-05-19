@@ -32,7 +32,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form class="row g-3 needs-validation" novalidate>
+        <form action="<?php echo URL.'login/login'; ?>" method="POST" class="row g-3 needs-validation">
           <div class="col-md-12">
             <label for="validationCustom01" class="form-label">Correo:</label>
             <input type="email" name="logincorreo" class="form-control" id="validationCustom01" required>
@@ -42,7 +42,7 @@
           </div>
           <div class="col-md-12">
             <label for="validationCustom03" class="form-label">Contraseña</label>
-            <input type="password" name="logincontraseña" class="form-control" id="validationCustom03" required>
+            <input type="password" name="logincontrasenia" class="form-control" id="validationCustom03" required>
             <div class="invalid-feedback">
               proporcione una contraseña válida
             </div>
@@ -50,7 +50,7 @@
         </form>
         <div>
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-          <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+          <input type="submit" class="btn btn-primary" value="Iniciar Sesión">
         </div>
       </div>
     </div>

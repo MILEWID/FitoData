@@ -19,7 +19,7 @@ class LoginController extends Controller{
         if(!empty($email) || empty(!$password)){    
             $queryModel = $this->loginModel->show();
             if($queryModel["correo"] == $email && $queryModel['contrasenia'] == $password){
-                echo "okis";
+                redirect_to("employee");
             }
         }else{
             redirect_to('login?st=1');
