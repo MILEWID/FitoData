@@ -10,8 +10,9 @@ class LoginController extends Controller{
     }
 
     function index(){
-        echo "bienvenido";
+        parent::render('php/index');
     }
+    
     function login(){
         $email = filter_var($_POST['loginconrreo'], FILTER_SANITIZE_EMAIL);
         $password = filter_var($_POST['logincontrasenia'], FILTER_SANITIZE_STRING);

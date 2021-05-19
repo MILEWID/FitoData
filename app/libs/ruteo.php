@@ -7,7 +7,7 @@ class Ruteo{
 
     function __construct()
     {
-        $this->url = isset($_GET['url']) ? $_GET['url'] : 'home';
+        $this->url = isset($_GET['url']) ? $_GET['url'] : 'login';
         $this->url = rtrim($this->url,'/');
         $this->url = explode('/',$this->url); 
         
