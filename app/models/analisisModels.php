@@ -1,6 +1,6 @@
 <?php
 
-class EstudioModels extends Model{
+class EstudioAnalisisModels extends Model{
 
     private $table = "analisis_estudio";
     function __construct()

@@ -25,10 +25,10 @@ class EstudioController extends Controller{
         $id_employee = filter_var($_POST['idtrabajador'],FILTER_SANITIZE_STRING);
         $id_cultivo = filter_var($_POST['idcultivo'],FILTER_SANITIZE_STRING);
 
-        $estudio = array($date, $id_employee, $id_cultivo);
+        $estudio = array("date" => $date, "id_em" => $id_employee, "id_cul" => $id_cultivo);
         $result = $this->estudioModel->add($estudio);
 
-        if($result[0] == "ok"){
+        if($result == "ok"){
             redirect_to("estudio");
         }else{
             print_message_json(500, "Error interno, intentelo mas tarde");

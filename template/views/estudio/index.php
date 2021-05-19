@@ -31,15 +31,16 @@ require_once INCLUDES . 'header.php' ?>
         <div class="container">
             <div class="col-6">
                 <h2> INGRESO DE DATOS DEL ESTUDIO </h2>
-                <form>
+                <form method="POST" action="<?php echo URL.'estudio/add'; ?>">
                     <div class="form-group">
                         <label for="exampleInputEmail1">Fecha </label>
-                        <input type="date" class="form-control" name="fecha" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                        <input type="date" class="form-control" name="date" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Trabajador </label>
                         <br>
-                        <select name="" id="">
+                        <select name="idtrabajador" id="">
+                            <option value="" selected disabled>Seleccione uno</option>
                             <?php foreach ($trabajadores as $key => $trbajador) : ?>
                                 <option class="form-control" value="<?php echo $trbajador["id_trabajador"]; ?>"><?php echo "{$trbajador["apellidos"]} {$trbajador["nombres"]}"; ?></option>
                             <?php endforeach; ?>
@@ -49,7 +50,8 @@ require_once INCLUDES . 'header.php' ?>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Sector </label>
                         <br>
-                        <select name="" id="">
+                        <select name="idcultivo" id="">
+                            <option value="" selected disabled>Seleccione uno</option>
                             <?php foreach ($sectores as $key => $sector) : ?>
                                 <option class="form-control" value="<?php echo $sector["id_sector"]; ?>"><?php echo "{$sector["nombre"]}"; ?></option>
                             <?php endforeach; ?>
