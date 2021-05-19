@@ -30,8 +30,8 @@ require_once INCLUDES . 'header.php' ?>
     <div class="container">
         <div class="container">
             <div class="col-6">
-                <h2> INGRESO DE DATOS DEL ESTUDIO </h2>
-                <form method="POST" action="<?php echo URL.'estudio/add'; ?>">
+                <h2> Ingreso de datos del Estúdio </h2>
+                <form action="<?php echo URL.'estudio/add'; ?>" method="POST">
                     <div class="form-group">
                         <label for="exampleInputEmail1">Fecha </label>
                         <input type="date" class="form-control" name="date" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
@@ -67,30 +67,17 @@ require_once INCLUDES . 'header.php' ?>
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
+                        <th scope="col">#id</th>
+                        <th scope="col">Fecha </th>
+                        <th scope="col">Opciones </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <th scope="row">1</th>
                         <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
+                        <td><button type="button" class="btn btn-warning">Agregar Análisis</button> <button type="button" class="btn btn-danger">Eliminar Análisis</button></td>
+                        
                     </tr>
                 </tbody>
             </table>
